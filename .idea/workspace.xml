@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e7d2b56-9748-4fa7-b817-900efa7c5d2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spel.js" afterPath="$PROJECT_DIR$/spel.js" />
-    </list>
+    <list default="true" id="5e7d2b56-9748-4fa7-b817-900efa7c5d2d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -133,12 +131,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515672228054</updated>
       <workItem from="1515672229276" duration="19000" />
-      <workItem from="1515673658197" duration="663000" />
+      <workItem from="1515673658197" duration="718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="682000" />
+    <option name="totallyTimeSpent" value="737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
