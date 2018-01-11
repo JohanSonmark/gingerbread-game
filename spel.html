@@ -6,13 +6,27 @@
     <link href="spel.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div id="spelcanvas" onmouseover="moveright()">
 
+<div id="spelCanvas" onmouseover="moveright()">
+    <svg width="200" height="200" id="svgMap">
+        <rect width="200" height="200" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />
+    </svg>
 </div>
-
-
 <input type="button" value="PLAY"  onclick="play()">
 <audio id="audio" src="jingle-bells-country.mp3" ></audio>
+
+<div id="modalWrapper">
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Do you want to try again?</p>
+                <button id="playAgainBtn">Play Again?</button>
+                <button id="quitBtn">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="spel.js"></script>
 </body>
