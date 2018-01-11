@@ -1,0 +1,13 @@
+#spelcanvas {
+    background-color: rgb(0,0,0);
+    width: 500px;
+    height: 500px;
+}
+
+#spelcanvas {
+    cursor: url(img/gingerbreadmancookie.png), auto;
+}
+
+body {
+    background-image: url("img/fallingsnow.gif");
+}
