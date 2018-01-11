@@ -1,8 +1,3 @@
-/*Gingerbreadman on cursor when mouseover game canvas*/
-document.getElementById("spelCanvas").addEventListener("mouseover", function () {
-
-});
-
 var modal = document.getElementById('simpleModal');
 var svgMap = document.getElementById('svgMap');
 var playAgainBtn = document.getElementById('playAgainBtn');
