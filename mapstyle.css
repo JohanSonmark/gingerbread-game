@@ -21,7 +21,7 @@ body{
     animation-name: mapSlide;
     animation-timing-function: linear;
     margin-left: 25%;
-
+    cursor: url(img/gingerbreadmancookie.png), auto;
 }
 #svg1Left1{
     clip-path: polygon(92% 100%, 87% 95%, 84% 93%, 80% 89%, 73% 87%, 68% 85%, 66% 81%, 69% 76%, 75% 72%, 83% 68%, 92%
