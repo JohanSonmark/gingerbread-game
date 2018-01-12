@@ -1,11 +1,11 @@
 var modal = document.getElementById('simpleModal');
-var svgMap = document.getElementById('svgMap');
+var map = document.getElementsByClassName('map')[0];
 var playAgainBtn = document.getElementById('playAgainBtn');
 var quitBtn = document.getElementById('quitBtn');
 
 
 /*Temporary button to open modal and opacity background*/
-svgMap.addEventListener('mouseover', openModal);
+map.addEventListener('mouseover', openModal);
 
 /*Temporary function to close modal and opacity background*/
 playAgainBtn.addEventListener('click', closeModal);

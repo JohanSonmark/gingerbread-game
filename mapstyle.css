@@ -6,20 +6,20 @@ body,html{
 
 body{
     overflow: hidden;
-    background-color: black;
+    background-image: url("img/fallingsnow.gif");
 }
 
 .map{
     background-color: white;
     margin-top: -5px;
-    cursor: pointer; /*TEMPORARY PROOF OF COLLISION*/
+
 }
 
 #mapContainer{
     position: absolute;
-    animation-duration: 60s;
+    animation-duration: 15s;
     animation-name: mapSlide;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in;
     margin-left: 25%;
     cursor: url(img/gingerbreadmancookie.png), auto;
 }
@@ -67,6 +67,60 @@ body{
 }
 
 @keyframes mapSlide {
-    0%{top: -80000px;}
+    0%{top: -79000px;}
     100%{top: 0;}
+}
+
+.modal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    justify-items: center;
+    width: 30%;
+    margin: 20% auto;
+    background-color: palevioletred;
+    background-size: cover;
+    box-shadow: black 2px 2px 8px;
+    animation-name: modalOpen;
+    animation-duration: 2s;
+}
+
+.modal-body{
+    padding: 0 10px 20px 10px;
+}
+
+.modal-body>p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#playAgainBtn{
+    background-color: greenyellow;
+    padding: 5px;
+    font-weight: bold;
+    border: solid black 1px;
+}
+
+#quitBtn{
+    background-color: red;
+    font-weight: bold;
+    border: solid black 1px;
+
+    padding: 5px;
+}
+
+@keyframes modalOpen {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }

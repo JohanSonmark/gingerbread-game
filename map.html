@@ -12,25 +12,39 @@
 
 <div id="mapContainer">
     <div id="set1">
-        <svg class="map" id="svg1Left1" width="400" height="20000"></svg>
-        <svg class="map" id="svgRight1" width="400" height="20000"></svg>
+        <svg class="map" id="svg1Left1" width="400" height="20000" onmouseover="openModal()"></svg>
+        <svg class="map" id="svgRight1" width="400" height="20000" onmouseover="openModal()"></svg>
     </div>
 
     <div id="set2">
-        <svg class="map" id="svg1Left2" width="400" height="20000"></svg>
-        <svg class="map" id="svgRight2" width="400" height="20000"></svg>
+        <svg class="map" id="svg1Left2" width="400" height="20000" onmouseover="openModal()"></svg>
+        <svg class="map" id="svgRight2" width="400" height="20000" onmouseover="openModal()"></svg>
     </div>
 
     <div id="set3">
-        <svg class="map" id="svg1Left3" width="400" height="20000"></svg>
-        <svg class="map" id="svgRight3" width="400" height="20000"></svg>
+        <svg class="map" id="svg1Left3" width="400" height="20000" onmouseover="openModal()"></svg>
+        <svg class="map" id="svgRight3" width="400" height="20000" onmouseover="openModal()"></svg>
     </div>
 
     <div id="set4">
-        <svg class="map" id="svg1Left4" width="400" height="20000"></svg>
-        <svg class="map" id="svgRight4" width="400" height="20000"></svg>
+        <svg class="map" id="svg1Left4" width="400" height="20000" onmouseover="openModal()"></svg>
+        <svg class="map" id="svgRight4" width="400" height="20000" onmouseover="openModal()"></svg>
     </div>
 </div>
 
+<div id="modalWrapper">
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>YOU LOSE</p>
+                <p>Do you want to try again?</p>
+                <button id="playAgainBtn">Play Again?</button>
+                <button id="quitBtn">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="spel.js"></script>
 </body>
 </html>
