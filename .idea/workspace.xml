@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e7d2b56-9748-4fa7-b817-900efa7c5d2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Task1.css" afterPath="$PROJECT_DIR$/Task1.css" />
       <change beforePath="$PROJECT_DIR$/Task1.html" afterPath="$PROJECT_DIR$/Task1.html" />
-      <change beforePath="$PROJECT_DIR$/spel.js" afterPath="$PROJECT_DIR$/spel.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +19,8 @@
       <file leaf-file-name="Task1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Task1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="170">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -182,12 +179,12 @@
       <workItem from="1515924443423" duration="2656000" />
       <workItem from="1515946348269" duration="4848000" />
       <workItem from="1515956450026" duration="1506000" />
-      <workItem from="1515965862898" duration="3682000" />
+      <workItem from="1515965862898" duration="3974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26608000" />
+    <option name="totallyTimeSpent" value="26900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -589,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Task1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
