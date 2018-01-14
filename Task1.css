@@ -9,13 +9,14 @@ body{
     flex-direction: column;
     align-items: center;
     background-image: url("img/fallingsnow.gif");
+    height: 100vh;
 }
 h1{
     color: red;
 }
 #gameCanvas{
-    width: 900px;
-    height: 700px;
+    width: 50%;
+    height: 75%;
     border: solid black 5px;
     overflow: hidden;
     position: absolute;
@@ -30,7 +31,6 @@ h1{
     animation-duration: 15s;
     animation-timing-function: ease-in;
     position: relative;
-    z-index: 1;
     margin-top: -5px;
 }
 .cls-1:hover{
