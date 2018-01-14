@@ -1,13 +1,16 @@
 var modal = document.getElementById('simpleModal');
-var map = document.getElementsByClassName('map')[0];
+
+/*Loops through all elements with same class and prompts function if mouseover*/
+var map = document.getElementsByClassName('cls-1');
+
+for (var i = 0; i < map.length; i++){
+    var item = map[i];
+    item.addEventListener('mouseover', openModal);
+}
+/*Temporary function to close modal and opacity background*/
 var playAgainBtn = document.getElementById('playAgainBtn');
 var quitBtn = document.getElementById('quitBtn');
 
-
-/*Temporary button to open modal and opacity background*/
-map.addEventListener('mouseover', openModal);
-
-/*Temporary function to close modal and opacity background*/
 playAgainBtn.addEventListener('click', closeModal);
 quitBtn.addEventListener('click', closeModal);
 

@@ -17,6 +17,7 @@ body{
 
 #mapContainer{
     position: absolute;
+    z-index: -1;
     animation-duration: 15s;
     animation-name: mapSlide;
     animation-timing-function: ease-in;
