@@ -20,7 +20,7 @@ body{
 }
 
 #gameCanvas{
-    width: 50%;
+    width: 900px;
     height: 75%;
     border: solid black 5px;
     overflow: hidden;
@@ -33,7 +33,7 @@ body{
 
 .svgMap{
     animation-name: slideMap;
-    animation-duration: 15s;
+    animation-duration: 30s;
     animation-timing-function: ease-in;
     position: relative;
     margin-top: -5px;
@@ -43,7 +43,7 @@ body{
 }
 
 @keyframes slideMap{
-    0%{top: -900px;}
+    0%{top: -4100px;}
     100%{top: 0;}
 }
 
