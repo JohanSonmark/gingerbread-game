@@ -35,6 +35,7 @@ body{
     animation-name: slideMap;
     animation-duration: 30s;
     animation-timing-function: ease-in;
+    animation-play-state: running;
     position: relative;
     margin-top: -5px;
 }

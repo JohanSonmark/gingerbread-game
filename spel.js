@@ -1,11 +1,15 @@
 var modal = document.getElementById('simpleModal');
+var modalContent = document.getElementsByClassName('modal-content')[0];
+var svg = document.getElementsByClassName('svgMap')[0];
+
+setTimeout(function() { openModalWin(); }, 5000);
 
 /*Loops through all elements with same class and prompts function if mouseover*/
 var map = document.getElementsByClassName('cls-1');
 
 for (var i = 0; i < map.length; i++){
     var item = map[i];
-    item.addEventListener('mouseover', openModal);
+    item.addEventListener('mouseover', openModalLose);
 }
 /*Temporary function to close modal and opacity background*/
 var playAgainBtn = document.getElementById('playAgainBtn');
@@ -15,15 +19,25 @@ playAgainBtn.addEventListener('click', closeModal);
 quitBtn.addEventListener('click', closeModal);
 
 
-/*Open modal function*/
-function openModal(){
+/*Open modal function if cursor touches SVG*/
+function openModalLose(){
+    modalContent.style.background = 'red';
+    document.getElementById('winOrLose').innerHTML = "You LOSE!";
     modal.style.display = 'flex';
+    svg.style.animationPlayState = "paused"
 }
 
 /*Close modal function*/
 function closeModal() {
     modal.style.display = 'none';
     location.reload();
+}
+
+/*Opens modal function when certain time has passed*/
+function openModalWin() {
+    modalContent.style.background = 'green';
+    document.getElementById('winOrLose').innerHTML = "You WIN!";
+    modal.style.display = 'flex';
 }
 
 /*Snowflakes*/
