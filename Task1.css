@@ -97,6 +97,21 @@ body{
     padding: 5px;
 }
 
+#SadGinger {
+    height: 125px;
+    float: right;
+    margin-right: 25px;
+    display: block;
+}
+
+#HappyGinger {
+    height: 125px;
+    float: right;
+    margin-right: 25px;
+    display: none;
+}
+
+
 @keyframes modalOpen {
     from{opacity: 0;}
     to{opacity: 1;}

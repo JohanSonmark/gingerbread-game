@@ -22,6 +22,9 @@ quitBtn.addEventListener('click', closeModal);
 function openModalLose(){
     modalContent.style.background = 'red';
     document.getElementById('winOrLose').innerHTML = "You LOSE!";
+    document.getElementById('SadGinger').src="images/gingerbread-sad.png";
+    document.getElementById("SadGinger").style.display = 'block';
+    document.getElementById("HappyGinger").style.display = 'none';
     modal.style.display = 'flex';
     svg.style.animationPlayState = "paused";
 }
@@ -38,6 +41,9 @@ svg.addEventListener('webkitAnimationEnd', openModalWin);
 function openModalWin() {
     modalContent.style.background = 'green';
     document.getElementById('winOrLose').innerHTML = "You WIN!";
+    document.getElementById('SadGinger').src="images/happygingerbread_man";
+    document.getElementById("SadGinger").style.display = 'none';
+    document.getElementById("HappyGinger").style.display = 'block';
     modal.style.display = 'flex';
 }
 
