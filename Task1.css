@@ -22,7 +22,7 @@ body{
 #gameCanvas{
     width: 900px;
     height: 75%;
-    border: solid black 5px;
+    border: solid black 4px;
     overflow: hidden;
     position: absolute;
     top: 100px;
