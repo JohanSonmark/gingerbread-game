@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("img/fallingsnow.gif");
+    background-image: url("images/fallingsnow.gif");
     height: 100vh;
     font-family: 'Roboto', sans-serif;
 
@@ -28,22 +28,23 @@ body{
     top: 100px;
     z-index: 0;
     background-color: gray;
-    cursor: url(img/gingerbreadmancookie.png), auto;
+    cursor: url(images/gingerbreadmancookie.png), auto;
 }
 
 .svgMap{
     animation-name: slideMap;
-    animation-duration: 5s;
+    animation-duration: 40s;
     animation-timing-function: ease-in;
     animation-play-state: running;
     position: relative;
+
 }
 .cls-1:hover{
     cursor: pointer;
 }
 
 @keyframes slideMap{
-    0%{top: -4100px;}
+    0%{top: -6500px;}
     100%{top: 0;}
 }
 
@@ -82,14 +83,14 @@ body{
 }
 
 #playAgainBtn{
-    background-color: greenyellow;
+    background-color: forestgreen;
     padding: 5px;
     font-weight: bold;
     border: solid black 1px;
 }
 
 #quitBtn{
-    background-color: red;
+    background-color: skyblue;
     font-weight: bold;
     border: solid black 1px;
 
