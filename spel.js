@@ -2,8 +2,6 @@ var modal = document.getElementById('simpleModal');
 var modalContent = document.getElementsByClassName('modal-content')[0];
 var svg = document.getElementsByClassName('svgMap')[0];
 
-setTimeout(function() { openModalWin(); }, 5000);
-
 /*Loops through all elements with same class and prompts function if mouseover*/
 var map = document.getElementsByClassName('cls-1');
 
@@ -11,6 +9,7 @@ for (var i = 0; i < map.length; i++){
     var item = map[i];
     item.addEventListener('mouseover', openModalLose);
 }
+
 /*Temporary function to close modal and opacity background*/
 var playAgainBtn = document.getElementById('playAgainBtn');
 var quitBtn = document.getElementById('quitBtn');
@@ -24,7 +23,7 @@ function openModalLose(){
     modalContent.style.background = 'red';
     document.getElementById('winOrLose').innerHTML = "You LOSE!";
     modal.style.display = 'flex';
-    svg.style.animationPlayState = "paused"
+    svg.style.animationPlayState = "paused";
 }
 
 /*Close modal function*/
@@ -32,6 +31,8 @@ function closeModal() {
     modal.style.display = 'none';
     location.reload();
 }
+/*Check for animation end and executes openModalWin function*/
+svg.addEventListener('webkitAnimationEnd', openModalWin);
 
 /*Opens modal function when certain time has passed*/
 function openModalWin() {

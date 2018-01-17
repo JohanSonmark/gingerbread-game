@@ -33,11 +33,10 @@ body{
 
 .svgMap{
     animation-name: slideMap;
-    animation-duration: 30s;
+    animation-duration: 5s;
     animation-timing-function: ease-in;
     animation-play-state: running;
     position: relative;
-    margin-top: -5px;
 }
 .cls-1:hover{
     cursor: pointer;
