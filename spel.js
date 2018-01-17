@@ -10,7 +10,7 @@ for (var i = 0; i < map.length; i++){
     item.addEventListener('mouseover', openModalLose);
 }
 
-/*Temporary function to close modal and opacity background*/
+/*When button is clicked reloads the current page*/
 var playAgainBtn = document.getElementById('playAgainBtn');
 var quitBtn = document.getElementById('quitBtn');
 
@@ -34,7 +34,7 @@ function closeModal() {
 /*Check for animation end and executes openModalWin function*/
 svg.addEventListener('webkitAnimationEnd', openModalWin);
 
-/*Opens modal function when certain time has passed*/
+/*Opens modal function when css animation ends*/
 function openModalWin() {
     modalContent.style.background = 'green';
     document.getElementById('winOrLose').innerHTML = "You WIN!";
