@@ -8,9 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("images/fallingsnow.gif");
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
 
     background-color: #9cf;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6af), to(#bdf));
@@ -19,16 +17,21 @@ body{
     background-image: linear-gradient(#6af, #bdf);
 }
 
+#banner{
+    margin-top: 15px;
+}
+
 #gameCanvas{
     width: 900px;
     height: 75%;
-    border: solid black 4px;
+    outline: 7px solid #B61200;
     overflow: hidden;
     position: absolute;
     top: 100px;
     z-index: 0;
     background-color: lightblue;
-    cursor: url(images/gingerbreadmancookie.png), auto;
+    cursor: url(images/gingerbreadmancookie.png) 25 15, auto;
+    box-shadow: black 0 15px 30px;
 }
 
 .svgMap{
@@ -38,9 +41,6 @@ body{
     animation-play-state: running;
     position: relative;
 
-}
-.cls-1:hover{
-    cursor: pointer;
 }
 
 @keyframes slideMap{
@@ -188,4 +188,3 @@ body{
     width: 100%;
     height: 100%;
 }
-

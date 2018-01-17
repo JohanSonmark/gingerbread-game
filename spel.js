@@ -27,6 +27,11 @@ function openModalLose(){
     document.getElementById("HappyGinger").style.display = 'none';
     modal.style.display = 'flex';
     svg.style.animationPlayState = "paused";
+
+    var x = document.getElementById('christmasSpirit');
+    x.pause();
+    var audio = new Audio('sound/failSound.mp3');
+    audio.play();
 }
 
 /*Close modal function*/
@@ -45,6 +50,11 @@ function openModalWin() {
     document.getElementById("SadGinger").style.display = 'none';
     document.getElementById("HappyGinger").style.display = 'block';
     modal.style.display = 'flex';
+
+    var x = document.getElementById('christmasSpirit');
+    x.pause();
+    var audio = new Audio('sound/taDa.mp3');
+    audio.play();
 }
 
 /*Snowflakes*/
