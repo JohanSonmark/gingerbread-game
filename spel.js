@@ -2,6 +2,10 @@ var modal = document.getElementById('simpleModal');
 var modalContent = document.getElementsByClassName('modal-content')[0];
 var svg = document.getElementsByClassName('svgMap')[0];
 
+var startSound = new Audio('sound/christmas-spirit.mp3');
+var winSound = new Audio('sound/taDa.mp3');
+var failSound = new Audio('sound/failSound.mp3');
+
 /*Loops through all elements with same class and prompts function if mouseover*/
 var map = document.getElementsByClassName('cls-1');
 
@@ -28,10 +32,8 @@ function openModalLose(){
     modal.style.display = 'flex';
     svg.style.animationPlayState = "paused";
 
-    var x = document.getElementById('christmasSpirit');
-    x.pause();
-    var audio = new Audio('sound/failSound.mp3');
-    audio.play();
+    startSound.pause();
+    failSound.play();
 }
 
 /*Close modal function*/
@@ -51,10 +53,8 @@ function openModalWin() {
     document.getElementById("HappyGinger").style.display = 'block';
     modal.style.display = 'flex';
 
-    var x = document.getElementById('christmasSpirit');
-    x.pause();
-    var audio = new Audio('sound/taDa.mp3');
-    audio.play();
+    startSound.pause();
+    winSound.play();
 }
 
 /*Snowflakes*/
@@ -170,3 +170,30 @@ window.onload = function() {
         Snowflake.init(document.getElementById('snow'));
     }, 500);
 };
+
+document.getElementById('countDown').addEventListener('click', startGame);
+
+function delay(ms) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(resolve, ms);
+    });
+}
+
+function startGame() {
+    var count = 3;
+    function anim() {
+        if (count > 0) {
+            document.getElementById('countDown').innerHTML = count;
+            count--;
+            setTimeout(anim, 1000);
+        }
+        else {
+            svg.style.animationPlayState = "running";
+            document.getElementById('countDown').style.display = 'none';
+            document.getElementById('startOverlay').style.display ='none';
+
+            startSound.play();
+        }
+    }
+    anim();
+}
