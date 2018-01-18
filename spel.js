@@ -25,7 +25,7 @@ quitBtn.addEventListener('click', closeModal);
 /*Open modal function if cursor touches SVG*/
 function openModalLose(){
     modalContent.style.background = 'red';
-    document.getElementById('winOrLose').innerHTML = "You LOSE!";
+    document.getElementById('winOrLose').innerHTML = "YOU LOSE";
     document.getElementById('SadGinger').src="images/gingerbread-sad.png";
     document.getElementById("SadGinger").style.display = 'block';
     document.getElementById("HappyGinger").style.display = 'none';
@@ -47,7 +47,7 @@ svg.addEventListener('webkitAnimationEnd', openModalWin);
 /*Opens modal function when css animation ends*/
 function openModalWin() {
     modalContent.style.background = 'green';
-    document.getElementById('winOrLose').innerHTML = "You WIN!";
+    document.getElementById('winOrLose').innerHTML = "YOU WIN";
     document.getElementById('SadGinger').src="images/happygingerbread_man";
     document.getElementById("SadGinger").style.display = 'none';
     document.getElementById("HappyGinger").style.display = 'block';
@@ -181,11 +181,11 @@ function delay(ms) {
 
 function startGame() {
     var count = 3;
-    function anim() {
+    function counter() {
         if (count > 0) {
             document.getElementById('countDown').innerHTML = count;
             count--;
-            setTimeout(anim, 1000);
+            setTimeout(counter, 1000);
         }
         else {
             svg.style.animationPlayState = "running";
@@ -195,5 +195,5 @@ function startGame() {
             startSound.play();
         }
     }
-    anim();
+    counter();
 }
