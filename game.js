@@ -1,6 +1,8 @@
 var modal = document.getElementById('simpleModal');
 var modalContent = document.getElementsByClassName('modal-content')[0];
 var svg = document.getElementsByClassName('svgMap')[0];
+var a = 0;
+var b = true;
 
 var startSound = new Audio('sound/christmas-spirit.mp3');
 var winSound = new Audio('sound/taDa.mp3');
@@ -29,11 +31,14 @@ function openModalLose(){
     document.getElementById('SadGinger').src="images/gingerbread-sad.png";
     document.getElementById("SadGinger").style.display = 'block';
     document.getElementById("HappyGinger").style.display = 'none';
+    document.getElementById('slutscore').innerHTML = a;
     modal.style.display = 'flex';
     svg.style.animationPlayState = "paused";
 
+    b = false;
     startSound.pause();
     failSound.play();
+
 }
 
 /*Close modal function*/
@@ -51,6 +56,7 @@ function openModalWin() {
     document.getElementById('SadGinger').src="images/happygingerbread_man";
     document.getElementById("SadGinger").style.display = 'none';
     document.getElementById("HappyGinger").style.display = 'block';
+    document.getElementById('slutscore').innerHTML = a;
     modal.style.display = 'flex';
 
     startSound.pause();
@@ -187,44 +193,19 @@ function startGame() {
             document.getElementById('startOverlay').style.display ='none';
 
             startSound.play();
+            timeText();
         }
     }
     counter();
 }
 
-/*
-function timedText() {
-    setTimeout(myTimeout1, 100)
-    setTimeout(myTimeout2, 200)
-    setTimeout(myTimeout3, 300)
-    setTimeout(myTimeout4, 400)
-    setTimeout(myTimeout5, 500)
-    setTimeout(myTimeout6, 600)
-    setTimeout(myTimeout7, 700)
-    setTimeout(myTimeout8, 400)
+function timeText() {
+    function scoreCounter() {
+        if (a < 401 && b===true) {
+            document.getElementById('score').innerHTML = a;
+            a++;
+            setTimeout(scoreCounter, 100);
+        }
+    }
+    scoreCounter();
 }
-
-function myTimeout1() {
-    document.getElementById("score").innerHTML = "1";
-}
-function myTimeout2() {
-    document.getElementById("score").innerHTML = "2";
-}
-function myTimeout3() {
-    document.getElementById("score").innerHTML = "3";
-}
-function myTimeout4() {
-    document.getElementById("score").innerHTML = "4";
-}
-function myTimeout5() {
-    document.getElementById("score").innerHTML = "5";
-}
-function myTimeout6() {
-    document.getElementById("score").innerHTML = "6";
-}
-function myTimeout7() {
-    document.getElementById("score").innerHTML = "7";
-}
-function myTimeout8() {
-    document.getElementById("score").innerHTML = "8";
-}*/
