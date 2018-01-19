@@ -173,11 +173,13 @@ window.onload = function() {
 
 document.getElementById('countDown').addEventListener('click', startGame);
 
+/*
 function delay(ms) {
     return new Promise(function (resolve, reject) {
         setTimeout(resolve, ms);
     });
 }
+*/
 
 function startGame() {
     var count = 3;

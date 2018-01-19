@@ -33,6 +33,9 @@ body{
 
 #banner{
     margin-top: 15px;
+    position: absolute;
+    top: 0;
+    left: 500px;
 }
 
 #gameCanvas{
@@ -212,7 +215,7 @@ h2{
     z-index: 10;
     color: white;
     margin: 0;
-    top: 400px;
+    top: 45%;
     font-size: 60px;
     font-family: 'Supermercado One', cursive;
     text-shadow: 7px 7px black;
