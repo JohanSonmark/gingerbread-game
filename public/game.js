@@ -1,8 +1,5 @@
-var modal = document.getElementById('simpleModal');
-var modalContent = document.getElementsByClassName('modal-content')[0];
-var svg = document.getElementsByClassName('svgMap')[0];
-var a = 0;
-var b = true;
+var score = 0;
+var endScore = true;
 
 var startSound = new Audio('sound/christmas-spirit.mp3');
 var winSound = new Audio('sound/taDa.mp3');
@@ -10,64 +7,63 @@ var failSound = new Audio('sound/failSound.mp3');
 
 /*Loops through all elements with same class and prompts function if mouseover*/
 var map = document.getElementsByClassName('cls-1');
-
 for (var i = 0; i < map.length; i++){
     var item = map[i];
     item.addEventListener('mouseover', openModalLose);
 }
 
-/*When button is clicked reloads the current page*/
-var playAgainBtn = document.getElementById('playAgainBtn');
-var quitBtn = document.getElementById('quitBtn');
+/*When user mouseover overlay prompt lose modal function*/
+document.getElementById('overlay').addEventListener('mouseover', openModalLose);
 
-playAgainBtn.addEventListener('click', closeModal);
-quitBtn.addEventListener('click', closeModal);
+/*When button is clicked reloads the current page*/
+document.getElementById('playAgainBtn').addEventListener('click', closeModal);
 
 
 /*Open modal function if cursor touches SVG*/
 function openModalLose(){
-    modalContent.style.background = 'red';
+    document.getElementById('endScore').innerHTML = score - 1;
+    document.getElementsByClassName('modal-content')[0].style.background = "red";
     document.getElementById('winOrLose').innerHTML = "YOU LOSE";
     document.getElementById('SadGinger').src="images/gingerbread-sad.png";
     document.getElementById("SadGinger").style.display = 'block';
     document.getElementById("HappyGinger").style.display = 'none';
-    document.getElementById('slutscore').innerHTML = a;
-    modal.style.display = 'flex';
-    svg.style.animationPlayState = "paused";
+    document.getElementById('simpleModal').style.display = 'flex';
+    document.getElementsByClassName('svgMap')[0].style.animationPlayState = "paused";
 
-    b = false;
+    endScore = false;
     startSound.pause();
     failSound.play();
 
 }
 
-/*Close modal function*/
+/*Hides the modal and reloads the page*/
 function closeModal() {
-    modal.style.display = 'none';
+    document.getElementById('simpleModal').style.display = 'none';
     location.reload();
 }
 /*Check for animation end and executes openModalWin function*/
-svg.addEventListener('webkitAnimationEnd', openModalWin);
+    document.getElementsByClassName('svgMap')[0].addEventListener('webkitAnimationEnd', openModalWin);
 
 /*Opens modal function when css animation ends*/
 function openModalWin() {
-    modalContent.style.background = 'green';
+    document.getElementById('endScore').innerHTML = score - 1;
+    document.getElementsByClassName('modal-content')[0].style.background = "green";
     document.getElementById('winOrLose').innerHTML = "YOU WIN";
     document.getElementById('SadGinger').src="images/happygingerbread_man";
     document.getElementById("SadGinger").style.display = 'none';
     document.getElementById("HappyGinger").style.display = 'block';
-    document.getElementById('slutscore').innerHTML = a;
-    modal.style.display = 'flex';
+    document.getElementById('simpleModal').style.display = 'flex';
 
+    endScore = false;
     startSound.pause();
     winSound.play();
 }
 
-/*Snowflakes*/
+/*Snowflakes in the background*/
 var Snowflake = (function() {
 
     var flakes;
-    var flakesTotal = 250;
+    var flakesTotal = 40;
     var wind = 0;
     var mouseX;
     var mouseY;
@@ -177,6 +173,7 @@ window.onload = function() {
     }, 500);
 };
 
+/*Counts down from 3 when user clicks START*/
 document.getElementById('countDown').addEventListener('click', startGame);
 
 function startGame() {
@@ -188,7 +185,7 @@ function startGame() {
             setTimeout(counter, 1000);
         }
         else {
-            svg.style.animationPlayState = "running";
+            document.getElementsByClassName('svgMap')[0].style.animationPlayState = "running";
             document.getElementById('countDown').style.display = 'none';
             document.getElementById('startOverlay').style.display ='none';
 
@@ -199,11 +196,12 @@ function startGame() {
     counter();
 }
 
+/*Adds score every 100ms*/
 function timeText() {
     function scoreCounter() {
-        if (a < 401 && b===true) {
-            document.getElementById('score').innerHTML = a;
-            a++;
+        if (score < 401 && endScore===true) {
+            document.getElementById('score').innerHTML = score;
+            score++;
             setTimeout(scoreCounter, 100);
         }
     }
