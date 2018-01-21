@@ -9,8 +9,9 @@ body{
     flex-direction: column;
     align-items: center;
     height: 100vh;
-
     font-family: 'Supermercado One', cursive;
+
+    /*Background color*/
     background-color: #9cf;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6af), to(#bdf));
     background-image: -webkit-linear-gradient(#6af, #bdf);
@@ -29,10 +30,10 @@ main{
     position: absolute;
     top: 100px;
     z-index: 0;
-    background-image: url("images/happygingerbread_man.png");
+    background: url("images/pepparkakshus.png");
     background-repeat: no-repeat;
     background-position: right top;
-    cursor: url(images/gingerbreadmancookie.png) 25 15, auto;
+    background-size: 100% 100%;
     box-shadow: black 0 15px 30px;
 }
 
@@ -41,11 +42,21 @@ main ul{
     flex-direction: column;
     list-style: none;
 }
+
 main li{
-    margin: 50px 25px 0 25px;
+    margin: 50px 0 0 0;
 }
-a{
-    cursor: url(images/gingerbreadmancookie.png) 25 15, auto;
+
+a[href^="https://www.silvermansound.com/"]{
+    text-decoration: none;
+    color: red;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-shadow: white 1px 1px;
+    font-family: 'Supermercado One', cursive;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .btn {
@@ -62,7 +73,7 @@ a{
     -webkit-box-shadow: 2px 2px 11px #666666;
     -moz-box-shadow: 2px 2px 11px #666666;
     box-shadow: 2px 2px 11px #666666;
-    font-family: Arial;
+    font-family: 'Supermercado One', cursive;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
@@ -77,6 +88,7 @@ a{
     background-image: -o-linear-gradient(top, #fcb33c, #d9ad34);
     background-image: linear-gradient(to bottom, #fcb33c, #d9ad34);
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -250,4 +262,9 @@ img {vertical-align: middle;}
     to {opacity: 1}
 }
 
-
+#banner{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50%;
+}
