@@ -11,8 +11,9 @@ body{
     flex-direction: column;
     align-items: center;
     height: 100vh;
-
     font-family: 'Supermercado One', cursive;
+
+    /*Background color*/
     background-color: #9cf;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6af), to(#bdf));
     background-image: -webkit-linear-gradient(#6af, #bdf);
@@ -20,6 +21,8 @@ body{
     background-image: linear-gradient(#6af, #bdf);
 }
 
+
+/*Score display*/
 #scorediv {
     display: flex;
     justify-content: center;
@@ -43,6 +46,8 @@ body{
     font-size: 20px;
 }
 
+
+/*Page banner*/
 #banner{
     margin-top: 15px;
     position: absolute;
@@ -50,11 +55,16 @@ body{
     left: 500px;
 }
 
+
+/*Background overlay*/
 #overlay{
     position: fixed;
     height: 100vh;
     width: 100%;
 }
+
+
+/*Game canvas*/
 #gameCanvas{
     width: 900px;
     height: 75%;
@@ -68,6 +78,8 @@ body{
     box-shadow: black 0 15px 30px;
 }
 
+
+/*The map*/
 .svgMap{
     animation-name: slideMap;
     animation-duration: 40s;
@@ -77,11 +89,15 @@ body{
 
 }
 
+
+/*Map animation*/
 @keyframes slideMap{
     0%{top: -6500px;}
     100%{top: 0;}
 }
 
+
+/*Modal*/
 .modal{
     display: none;
     flex-direction: column;
@@ -125,6 +141,7 @@ h2{
 }
 
 
+/*Modal buttons*/
 .animate
 {
     transition: all 0.1s;
@@ -177,6 +194,8 @@ h2{
     border-bottom: 1px solid;
 }
 
+
+/*Modal image*/
 #SadGinger {
     height: 125px;
     float: right;
@@ -192,15 +211,14 @@ h2{
 }
 
 
+/*Modal content animation*/
 @keyframes modalOpen {
     from{opacity: 0;}
     to{opacity: 1;}
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
+/*Snow*/
 .snowflake {
     position: absolute;
     display: block;
@@ -227,6 +245,8 @@ h2{
     height: 100%;
 }
 
+
+/*Count down text*/
 #countDown{
     position: absolute;
     z-index: 10;
@@ -243,13 +263,8 @@ h2{
     -webkit-transform: scale(1.2);
 }
 
-#startButton{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
 
+/*Start screen overlay*/
 #startOverlay{
     position: fixed;
     z-index: 10;
